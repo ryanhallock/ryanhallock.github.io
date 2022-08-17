@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #733333;
+}
+
+.topbar {
+    background-color: #773383;
+    overflow: hidden;
+    border-width: 3px;
+    border-color: black;
+}
+
+.topbar a {
+    color: #FFAAFF;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
