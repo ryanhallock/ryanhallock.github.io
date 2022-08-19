@@ -1,18 +1,130 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Digital Portfolio</title>
+    <title>RH - Digital Portfolio</title>
     <link rel="stylesheet" href="style.css"</style>
   </head>
-  <body>
+  <body class="center">
     <!--   Tab Bar at the top!   -->
-    <div class="topbar center">
+    <!--<div class="topbar center">
       <a href="index.html">About me</a>
       <a href="projects.html">Projects</a>
       <a href="classes.html">Classes</a>
+    </div>-->
+
+    <h1>Welcome to my Digital Portfolio!</h1>
+
+    <p>
+      My name is Ryan Hallock and you are currently viewing a finished uncompleted digital portfolio.
+      <br><br>
+      Here are some links for you to get around!
+      <div>
+      <a href="#why">Why is this page important?</a>
+      <a href="#classes">Classes</a>
+      <a href="#projects">Projects</a>
+      <a href="#gathered">Knowledge Gathered</a>
+      </div>
+    </p>
+
+    <hr>
+    <h1 id="why">Why is this page important?</h1>
+    <p>
+      This page is important, creating a place to document your journey through the Computer Science world.
+    </p>
+
+    <hr>
+    <h1 id="classes">Classes</h1>
+    <ul>
+      <li>2020 - 2021 Fundamentals of Computer Science</li>
+      <li>2021 - 2022 Computer Science 1</li>
+      <li>2022 - TBD  Computer Science 2</li>
+    </ul>
+
+    <hr>
+    <h1 id="projects">Projects</h1>
+
+    <div class="projects">
+    <h2>
+      OctoDuels - Intergrated Service Project 2022 - Computer Science 1
+    </h2>
+
+    <hr>
+    <h3>Concept</h3>
+    <p>
+      The idea for our project was to make a game, we decided to create a game based off `Simon`.
+      <br><br>
+      The game was a group project written in Swift under
+      <a href="https://github.com/TheCoderMerlin/Igis" class="inline">Igis</a>
+      a tool for creating graphical games.
+    </p>
+
+    <hr>
+    <h3>Motivation</h3>
+    <p>
+      The motivation that we could do all these cool ideas and make the game look awesome.
+    </p>
+
+    <hr>
+    <h3>Code Segments</h3>
+
+
+    <h4>Example 1 - Box Animations</h4>
+    <p>
+      We would create boxes to serve as input relays.
+      Everytime a box was pressed we would set the active state for a duration amount of frames.
+      The way we did this was calling <code>func animate(time: Int)</code> in our Box class.
+      <br><br>
+      This allowed us to call it in any box instance simplifying the code process.
+    </p>
+
+
+    <h4>Example 2 - Input Handling</h4>
+    <p>
+      Input handling was handled by an array, storing the keymap to input in the game.
+      When a key was pressed the array called <code>playerControls</code> would take in the input and produce a location.
+      The input would then be passed to the correct executor determined by the key press to <code>func handlePlayerKey(executorSide: PlayerSide, key: String)</code>.
+      <br><br>
+      This allowed us to simplify and allow more than two player if required on the screen, since you can come up with controls to each side.
+    </p>
+
+
+    <h4>Example 3 - Color Graphical Hacks</h4>
+    <p>
+      No graphical/game engine is perfect. We had to create some custom functions to deal with some color issues.
+      No String constructor was provided for the <code>Color</code> class.
+      <br><br>
+      First, we had to write the colors in a tupple array.
+      The array would store all the hex color codes for player color pallets.
+      <br><br>
+      Second, we would pass the tupple array into <code>convertArrayToPallete(colors: [(String, String, String?, String?)]) -> [ActiveColorStyle]</code>.
+      The last two strings are optional as they could be auto generatated, but kept for overrides.
+      <br></br>
+      Third, the function would then map all the hex codes to <code>Color</code> class, used in Igis
+      , to a custom function that's name is really long so it will be shortened <code>func CMIINNADASCFCBDNSWHTRTUT(hexColor: String?) -> Color</code>.
+      <br></br>
+      This function would take in the hex color and split and convert it into 3 </code>UInt8</code> instance's required by the <code>Color</code> class,
+      and then return that new color.
+    </p>
+
+    <hr>
+    <h3>Conclusion</h3>
+    <p>
+      As the project continued we realized we, didn't allocate enough time towards the project
+      , this forced some ideas to be moved away and the goal was to just make it working.
+      <br><br>
+      We used Igis, to see what exactly was possible, and you can do a lot of cool things in <a href="https://github.com/TheCoderMerlin/Igis" class="inline">Igis</a> as our peers and group found out.
+    </p>
     </div>
 
-    <h1>Welcome to my digital protfilo!</h1>
+    <!--<hr>-->
+    <h1 id="gathered">Knowledge Gathered</h3>
+    <p>
+      Last year we learned on how to convert from Binary to Hexadecimal to Octal.
+      We also learned about big-ecliduian and little-ecliduian.
+      How memeory works and how to do turtle graphics.
+      <br><br>
+      We also learned how to use and create our own game inside of <a href="https://github.com/TheCoderMerlin/Igis" class="inline">Igis</a>.
+    </p>
 
-    <p>My name is Ryan Hallock and you are currently viewing a not finished digital portfolio</p>
   </body>
 </html>

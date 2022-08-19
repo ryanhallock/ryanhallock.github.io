@@ -1,23 +1,75 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #733333;
-}
-
-.topbar {
-    background-color: #773383;
-    overflow: hidden;
-    border-width: 3px;
-    border-color: black;
-}
-
-.topbar a {
-    color: #FFAAFF;
-    padding: 15px;
-    font-size: 18px;
-}
+/*
+ * Color pallet
+ * #11151C
+ * #212D40
+ * #364156
+ * #7D4E57
+ * #D66853
+ */
 
 .center {
     margin: auto;
-    width: 50%;
+    width: 75%; /* TODO: dont apply when screen is smaller than 720p   */
+}
+body {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background-color: #11151C;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #d66853;
+}
+
+p, li, ul {
+    color: #7d4e67;
+}
+
+li {
+    font-size: 20px;
+}
+
+div a {
+    padding: 5px;
+    display: table;
+}
+
+hr {
+    border-top: 1px;
+    border-style: dashed;
+    border-color: #212D40;
+}
+
+.projects hr {
+    border-style: solid;
+    padding-left: 0px;
+}
+
+.projects p, .projects h1, .projects h2, .projects h3, .projects h4 {
+    padding-left: 15px;
+}
+
+div.projects {
+    border-style: solid;
+    border-color: #212D40;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+a {
+    color: #564156;
+}
+
+a.inline {
+    display: inline;
+    padding: 0px;
+}
+
+code {
+    color: #866853;
+    border-style: solid;
+    border-color: #212D40;
+    border-width: 1px;
+    padding: 1px 4px;
+    border-radius: 4px;
 }
