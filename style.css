@@ -25,10 +25,6 @@ p, li, ul {
     color: #7d4e67;
 }
 
-li {
-    font-size: 20px;
-}
-
 div a {
     padding: 5px;
     display: table;
@@ -72,4 +68,14 @@ code {
     border-width: 1px;
     padding: 1px 4px;
     border-radius: 4px;
+}
+
+.topbar {
+    background-color: #d66853;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.topbar a {
+    display: inline;
 }
