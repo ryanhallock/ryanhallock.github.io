@@ -56,6 +56,7 @@ a {
     color: #564156;
 }
 
+
 a.inline {
     display: inline;
     padding: 0px;
@@ -78,4 +79,9 @@ code {
 
 .topbar a {
     display: inline;
+}
+
+apa7 {
+    font-family: "Times New Roman";
+    font-size: 12px;
 }
