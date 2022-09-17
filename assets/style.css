@@ -19,10 +19,12 @@ body {
 
 h1, h2, h3, h4, h5 {
     color: #d66853;
+    font-family: inherit;
 }
 
 p, li, ul {
     color: #7d4e67;
+    font-family: inherit;
 }
 
 div a {
@@ -53,6 +55,7 @@ div.projects {
 }
 
 a {
+    font-family: monospace;
     color: #564156;
 }
 

@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
   loadTemplates()
 }, false);
 
-const LOADING_CONTENT = `<nostyle>We are loading '$TEMPLATE'<nostyle>`
+const FILE_LOCATION = "assets/index.js"
 
-const LOADING_FAILED_CONTENT = `<nostyle>Failed loading '$TEMPLATE'!<nostyle>`
+const LOADING_CONTENT = `<nostyle>We are loading '$TEMPLATE'</nostyle>`
+
+const LOADING_FAILED_CONTENT = `<nostyle>Failed loading '$TEMPLATE'!</nostyle>`
 
 function loadTemplates() {
   loadTemplate('navbar', (header, prefix) => {
@@ -16,43 +18,64 @@ function loadTemplates() {
 }
 
 function loadTemplate(name, callback) {
-  let homeDirPrefix = document.documentElement.getAttribute('prefix')
-  let template = document.getElementById(name)
+  caculateHomeDirPrefix((homeDirPrefix) => {
+    let template = document.getElementById(name)
 
-  template.innerHTML = LOADING_CONTENT.replace('$TEMPLATE', name)
+    template.innerHTML = LOADING_CONTENT.replace('$TEMPLATE', name)
 
-  fetch(homeDirPrefix + 'templates/' + name + '.html').then((respone) => {
-    if (respone.status > 399) {
-      failLoading(template, name)
-      return
+    //inner fail func
+    const failLoading = () => {
+      template.innerHTML = LOADING_FAILED_CONTENT.replace('$TEMPLATE', name)
     }
 
-    respone.text().then((success) => {
-      template.innerHTML = success
+    fetch(homeDirPrefix + 'templates/' + name + '.html').then((respone) => {
+      if (respone.status > 399) {
+        failLoading(template, name)
+        return
+      }
 
-      callback(template, homeDirPrefix)
+      respone.text().then((success) => {
+        template.innerHTML = success
+
+        callback(template, homeDirPrefix)
+      })
+    }).catch((failed) => {
+      failLoading(template, name)
     })
-  }).catch((failed) => {
-    failLoading(template, name)
   })
 }
 
-function failLoading(template, name) {
-  template.innerHTML = LOADING_FAILED_CONTENT.replace('$TEMPLATE', name)
-}
-
-//TODO: compute links using the current browsers location as a refence.
+//TODO: compute links using the current browsers location as a refence. OR using script/css src
 function fixLinks(element, prefix) {
-    let links = element.getElementsByTagName('a')
-
-    for (let i = 0; i < links.length; i++) {
-      let linkElement = links[i]
+  getElementsFromTag(element, 'a', (linkElement) => {
       let oldLink = linkElement.getAttribute('href')
 
-      if (oldLink.startsWith('http')) continue;
+      if (oldLink.startsWith('http')) return;
 
       let newLink = prefix + oldLink
 
       linkElement.setAttribute('href', newLink)
-    }
+  })
+}
+
+function caculateHomeDirPrefix(callback) {
+  getElementsFromTag(document, 'script', (element) => {
+    //TODO write to be safer against redrc attacks
+    if (!element.hasAttribute('src')) return
+
+    let srcRef = element.getAttribute('src')
+
+    if (!srcRef.endsWith(FILE_LOCATION)) return
+
+    callback(srcRef.replace(FILE_LOCATION, ''))
+  })
+}
+
+// shorter fori loop (convience)
+function getElementsFromTag(element, tag, callback) {
+  let elements = element.getElementsByTagName(tag)
+
+  for (let i = 0; i < elements.length; i++) {
+    callback(elements[i])
+  }
 }
