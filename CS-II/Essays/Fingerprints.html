@@ -3,11 +3,12 @@
   <head>
     <title>Fingerprints - Digital Portfolio</title>
     <link rel="stylesheet" href="./../../assets/style.css">
+    <link rel="stylesheet" href="./../../assets/apa.css">
     <script src="./../../assets/index.js"></script>
     <meta charset="UTF-8">
   </head>
 
-  <body class="center apa7">
+  <body class="center">
     <div id="navbar" class="navbar"></div>
 
     <!-- Compass Learn to use it! -->
@@ -24,6 +25,21 @@
       <li><a href="#flowchart">Flowchart</a></li>
       <li><a href="#cites">Credits/Cites</a></li>
     </ul>
+    <hr>
+    <div class="text-center cover">
+      <h1>Digital Fingerprints</h1>
+      <p>
+        Ryan Hallock
+        <br>
+        Computer Science II
+        <br>
+        Allen ISD Steam Campus
+        <br>
+        Professer Ben-Yaakov
+        <br>
+        August 25, 2022
+      </p>
+    </div>
 
     <hr>
     <h1 id="https">What are the two primary purposes of a secure, HTTPS connection?</h1>
@@ -32,58 +48,46 @@
       by preventing tampering and creating protection of privacy.
     </p>
 
-    <hr>
     <h1 id="httpsproxy">What is an HTTPS Proxy Appliance?</h1>
     <p>
       A HTTPS Proxy Appliance is a proxy that acts like a MITM.
-      <br><br>
       It works by using a forged certificate using the bad CA installed on your machine spoofing that you have a secure connection.
     </p>
 
-    <hr>
     <h1 id="mitm">What is MITM? What risks does this present?</h1>
     <p>
       A man in the middle (MITM) is where a entity sits between you
       and the entity you are trying to reach.
-      <br><br>
       The MITM can read all the information in a insecure HTTP connection
       and the data collected could be used malliaously.
     </p>
 
-    <hr>
     <h1 id="hash">What is a hash? What are the essential qualities that make a hash a "good" hash?</h1>
     <p>
       A hash is where a input always produces the same output. A good hash is where it is very computing to go backwards (to reverse the hash).
     </p>
 
-    <hr>
     <h1 id="ca">What is a CA? What role do they play?</h1>
     <p>
       A Certificate Authority job is to hand out certificates to allow for HTTPs connections.
       It will sign there certificate with its own to prove its real.
     </p>
 
-    <hr>
     <h1 id="ssl">How can SSL interception be detected/prevented?</h1>
     <p>
       SSL interception can be detected by verifying the sites digital
       fingerprint using a hash algorithm and comparing.
-      <br><br>
       SSL interception can be prevented with Extended Validation Certificates,
       allowing a secondary layer of verification.
     </p>
 
-    <hr>
     <h1 id="falsenorp">What is a false-positive? What is a false-negative?</h1>
     <p>
       A false positive is where a test or equation proves to generate the right answer but does not.
-      <br><br>
       A false negative is where a negative result should have been positive.
-      <br><br>
       In the current context these errors can happen with old HTTPS certificates or improper setup.
     </p>
 
-    <hr>
     <h1 id="gov">Does your school / government / ISP have a right to eavesdrop on your communications?</h1>
     <p>
       No, they have no right to record/document your communications.
@@ -91,22 +95,19 @@
       This provides them to be untrustworthy to you, and makes you prove yourself unlike
       without where you are trustworthy to begin with.
       Laws were passed to create backdoors and exploit security loopholes to spy on YOU.
-      <br><br>
-      TLDR: The Patriot Act was the worst bill passed for American citizens online security.
     </p>
 
-    <hr>
     <h1 id="flowchart">Authentic Fingerprint Flowchart</h1>
     <p>
       <object data="./../../assets/Flowchart.svg" type="image/svg+xml"></object>
     </p>
 
     <hr>
-    <h1 id="cites">Credits/Cites</h1>
-    <ul>
-      <li>Gibson Research Corporation. (n.d.). Gibson Research Corporation. Retrieved August 25, 2022, from https://www.grc.com/fingerprints.htm </li>
-      <li>diagrams.net. (n.d.). DrawIO. Retrieved August 25, 2022, from https://app.diagrams.net/ </li>
-      <li>American Civil Liberties Union. (n.d.). Surveillance Under the USA/PATRIOT Act. Retrieved August 25, 2022, from https://www.aclu.org/other/surveillance-under-usapatriot-act </li>
+    <h1 id="cites">Credits/Refernces</h1>
+    <ul class="cites">
+      <li>American Civil Liberties Union. (n.d.). Surveillance Under the USA/PATRIOT Act. <br>Retrieved August 25, 2022, from https://www.aclu.org/other/surveillance-under-usapatriot-act </li>
+      <li>diagrams.net. (n.d.). DrawIO. <br>Retrieved August 25, 2022, from https://app.diagrams.net/ </li>
+      <li>Gibson Research Corporation. (n.d.). Gibson Research Corporation. <br>Retrieved August 25, 2022, from https://www.grc.com/fingerprints.htm </li>
     </ul>
   </body>
 </html>
