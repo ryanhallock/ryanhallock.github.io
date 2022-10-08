@@ -28,9 +28,36 @@
       Spreadsheets Link
     </a>
     </p>
-    <h1>Flowchart</h1>
+    <h2>Flowchart</h2>
     <p>
       <object data="./../../assets/Flowchart-sort.svg" type="image/svg+xml"></object>
+    </p>
+    <h1>Part 1 - Sort Analysis</h1>
+    <p>
+      Whilst sorting and plotting all the data, the data shows that bubble sort is the slowest.
+      The reason that bubble sort is the slowest is that it has to go over the array and compare everytime.
+      While with the other sorting algorithms the size they have to search shrinks over time.
+      The number of passes insertion and selection sort is equal to the number of elements.
+      That being said, insertion sort is slower on a larger list as it compares all the previous elements but still faster than bubble sort.
+      Using these results, selection sort beat out the completion by showing up to 22s compared bubble sorts 150s in 100,000 strings.
+      <br><br>
+      More accurately, insertion sort on reversed ordered is the slowest, whilst bubble sort is slowest overall (not far behind on reverse).
+      Selection sort was the fastest overall.
+      The reason is that it srunk its compare size with each pass.
+      It did this by pushing it all to the left, while others still compared already switched values.
+      <br><br>
+      This project can be setup by cloning and running <code>swift build -c release</code> a few times and then running the command provided in the spreadsheet.
+      <br>
+      <br>
+      <a href="https://github.com/ryanhallock/BubbleSort">Bubble Sort</a>
+      <br>
+      <a href="https://github.com/ryanhallock/InsertionSort">Insertion sort</a>
+      <br>
+      <a href="https://github.com/ryanhallock/SelectionSort">Selection Sort</a>
+      <br>
+      <a href="https://docs.google.com/spreadsheets/d/15aFfvR7bYFF0uwVHJwup61qOlkCK7RzDCUL5iltbQmw/view">Data spreadsheet</a>
+      <br><br>
+      <object data="./../../assets/Line-Chart.svg" type="image/svg+xml"></object>
     </p>
   </body>
 </html>
