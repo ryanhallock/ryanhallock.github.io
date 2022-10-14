@@ -1,3 +1,7 @@
+# Ignore Templates
+*.template
+
+
 # -*- mode: gitignore; -*-
 *~
 \#*\#
