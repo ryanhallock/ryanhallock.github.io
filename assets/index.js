@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const FILE_LOCATION = "assets/index.js"
 
-
-const LOADING_CONTENT = '' // nothing for empty div
-//depercated const LOADING_CONTENT = `<nostyle>We are loading '$TEMPLATE'</nostyle>` 
-
 const LOADING_FAILED_CONTENT = `<nostyle>Failed loading '$TEMPLATE'!</nostyle>`
 
 function loadTemplates() {
@@ -22,9 +18,6 @@ function loadTemplates() {
 function loadTemplate(name, callback) {
   caculateHomeDirPrefix((homeDirPrefix) => {
     let template = document.getElementById(name)
-
-    //depercated 
-    //template.innerHTML = LOADING_CONTENT.replace('$TEMPLATE', name)
 
     //inner fail func
     const failLoading = () => {
