@@ -1,30 +1,27 @@
 /*
- * Color pallet
- * #11151C
- * #212D40
- * #364156
- * #7D4E57
- * #D66853
+ *Color Pallete https://realtimecolors.com/?colors=deeff2-030707-34737f-091416-4498a7
  */
-
 .center {
     margin: auto;
-    width: 75%; /* TODO: dont apply when screen is smaller than 720p   */
+    width: 75%;
 }
+
 body {
     padding-top: 15px;
     padding-bottom: 30px;
-    background-color: #11151C;
+    background-color: #030707;
 }
 
 h1, h2, h3, h4, h5 {
-    color: #d66853;
+    color: #deeff2;
     font-family: inherit;
+    font-size: 3vh
 }
 
 p, li, ul {
-    color: #7d4e67;
+    color: #deeff2;
     font-family: inherit;
+    font-size: 2vh;
 }
 
 div a {
@@ -56,11 +53,10 @@ div.projects {
 
 a {
     font-family: monospace;
-    color: #564156;
+    color: #4498a7;
 }
 
-
-a.inline {
+.inline {
     display: inline;
     padding: 0px;
 }
@@ -75,13 +71,14 @@ code {
 }
 
 .navbar {
-    background-color: #d66853;
+    background-color: #091416;
     padding: 5px;
     border-radius: 5px;
 }
 
 .navbar a {
     display: inline;
+    font-size: 15px;
 }
 
 img {
@@ -101,4 +98,18 @@ img {
 }
 .hover_img img {
     width: unset;
+}
+
+@media screen and (max-width: 900px) { /* Support for smaller screens */
+    .center {
+        width: 95%;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: 15px;
+    }
+
+    p, li, ul {
+        font-size: 12px;
+    }
 }
