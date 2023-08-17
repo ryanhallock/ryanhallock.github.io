@@ -15,13 +15,13 @@ body {
 h1, h2, h3, h4, h5 {
     color: #deeff2;
     font-family: inherit;
-    font-size: 3vh
+    font-size: 15px;
 }
 
 p, li, ul {
     color: #deeff2;
     font-family: inherit;
-    font-size: 2vh;
+    font-size: 12px;
 }
 
 div a {
@@ -106,10 +106,21 @@ img {
     }
 
     h1, h2, h3, h4, h5 {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     p, li, ul {
-        font-size: 12px;
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (min-width: 1600px) { /* Support for big screens */
+    h1, h2, h3, h4, h5 {
+        font-size: 20px;
+    }
+
+    p, li, ul {
+        font-size: 15px;
     }
 }
