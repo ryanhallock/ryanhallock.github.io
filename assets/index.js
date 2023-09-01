@@ -24,7 +24,7 @@ function loadTemplate(name, callback) {
       template.innerHTML = LOADING_FAILED_CONTENT.replace('$TEMPLATE', name)
     }
 
-    fetch(homeDirPrefix + 'templates/' + name + '.html').then((respone) => {
+    fetch(homeDirPrefix + 'templates/' + name + '.html', { cache: "force-cache" }).then((respone) => {
       if (respone.status > 399) {
         failLoading(template, name)
         return
