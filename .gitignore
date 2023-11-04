@@ -1,6 +1,8 @@
 # Ignore Templates
 *.template
 
+# Ignore Latex .tex
+*.tex
 
 # -*- mode: gitignore; -*-
 *~
